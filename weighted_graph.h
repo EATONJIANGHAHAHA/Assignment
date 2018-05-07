@@ -30,7 +30,19 @@ private:
     //You will need to add some data members here
     //to actually represent the graph internally,
     //and keep track of whatever you need to.
-
+    template<typename Weight>
+    class edge{
+    private:
+        int vertexOne;
+        int vertexTwo;
+        Weight weight;
+    public:
+        edge(int vOne,int vTwo, Weight w){
+            this->vertexOne = vOne;
+            this->vertexTwo = vTwo;
+            this->weight = w;
+        }
+    };
     //The graph_iterator class provides an iterator
     //over the vertices of the graph.
     //This is one of the harder parts, so if you're
@@ -187,6 +199,8 @@ template <typename vertex> bool weighted_graph<vertex>::has_vertex(const vertex&
 }
 
 template <typename vertex> bool weighted_graph<vertex>::are_adjacent(const vertex& u, const vertex& v) const {
+
+
     return false;
 }
 
